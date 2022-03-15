@@ -1,9 +1,9 @@
+#include "Player.h"
 #include <stdlib.h>
-#include "RandomComputer.h"
 
-RandomComputer::RandomComputer() : Player() {}
+Player::Player() {}
 
-char RandomComputer::makeMove() {
+char Player::makeMove() {
   int randomNum = rand() % 3 + 1;
   if (randomNum == 1) {
     return 'R';

@@ -3,9 +3,7 @@
 
 #include "Human.h"
 
-Human::Human() {
-
-};
+Human::Human() : Player() {};
 
 char Human::makeMove() {
   char move;

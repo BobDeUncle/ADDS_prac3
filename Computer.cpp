@@ -1,8 +1,6 @@
 #include "Computer.h"
 
-Computer::Computer() {
-
-};
+Computer::Computer() : Player() {};
 
 char Computer::makeMove() {
   return 'R';

@@ -1,13 +1,12 @@
 #ifndef REFEREE_H
 #define REFEREE_H
 
-#include "Human.h"
-#include "Computer.h"
+#include "Player.h"
 
 class Referee {
   public: 
     Referee();
-    char refGame(Human player1, Computer player2);
+    char refGame(Player player1, Player player2);
 };
 
 #endif
