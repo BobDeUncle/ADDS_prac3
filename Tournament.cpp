@@ -39,36 +39,11 @@ Player * Tournament::run(array<Player *, 8>  competitors) {
   std::array<Player *, 2> round2Winners = {round1Winners[0], round1Winners[2]};
 
   for (int i = 0; i < 2; i++) {
-    int WTally = 0, LTally = 0;
-
-    for (int i = 0; i < 5; i++) {
-      if (referee.refGame((*competitors[i]), (*competitors[i+1])) == 'W') {
-        WTally++;
-      } else if (referee.refGame((*competitors[i]), (*competitors[i+1])) == 'L') {
-        LTally++;
-      } 
-    }
-    if (LTally > WTally) {
-      round2Winners[0] = competitors[i+1];
-    }
-
-    WTally = 0;
-    LTally = 0;
+    Player * winner = runRound(round1Winners[i*2], round1Winners[(i*2)+1]);
+    round2Winners[i] = winner;
   }
 
-  Player * round3Winner = round2Winners[0];
-  int WTally = 0, LTally = 0;
+  Player * winner = runRound(round2inners[0], round2Winners[1]);
 
-  for (int i = 0; i < 5; i++) {
-    if (referee.refGame((*competitors[i]), (*competitors[i+1])) == 'W') {
-      WTally++;
-    } else if (referee.refGame((*competitors[i]), (*competitors[i+1])) == 'L') {
-      LTally++;
-    }
-  }
-  if (LTally > WTally) {
-    round3Winner = round2Winners[1];
-  }
-
-  return round3Winner;
+  return winner;
 };
