@@ -43,7 +43,7 @@ Player * Tournament::run(array<Player *, 8>  competitors) {
     round2Winners[i] = winner;
   }
 
-  Player * winner = runRound(round2inners[0], round2Winners[1]);
+  Player * winner = runRound(round2Winners[0], round2Winners[1]);
 
   return winner;
 };
