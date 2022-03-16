@@ -10,10 +10,10 @@ Player * runRound(Player * player1, Player * player2) {
   Referee referee;
 
   for (int i = 0; i < 5; i++) {
-    char gameResult = referee.refGame(player1, player2);
+    char gameResult = referee.refGame(*player1, *player2);
     if (gameResult == 'W') {
       WTally++;
-    } else (gameResult == 'L') {
+    } else if (gameResult == 'L') {
       LTally++;
     } 
   }
@@ -32,7 +32,7 @@ Player * Tournament::run(array<Player *, 8>  competitors) {
   std::array<Player *, 4> round1Winners = {competitors[0], competitors[2], competitors[4], competitors[6]};
 
   for (int i = 0; i < 4; i++) {
-    Player * winner = runRound((*competitors[i*2]), (*competitors[(i*2)+1]));
+    Player * winner = runRound(competitors[i*2], competitors[(i*2)+1]);
     round1Winners[i] = winner;
   }
 
