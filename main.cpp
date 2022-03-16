@@ -44,6 +44,7 @@ int main(void) {
   // cout << player9.makeMove() << endl;
   // cout << player9.makeMove() << endl;
   // cout << player9.makeMove() << endl;
-  cout << tournament.run(playerArray) << endl;
+  Player * winner = tournament.run(playerArray);
+  cout << (*winner).makeMove() << endl;
 }
 
