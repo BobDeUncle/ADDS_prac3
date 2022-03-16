@@ -23,13 +23,17 @@ Player * runRound(Player * player1, Player * player2) {
   } else {
     return player1;
   }
-} 
+}
 
 Tournament::Tournament() {};
 
 Player * Tournament::run(array<Player *, 8>  competitors) {
   Referee referee;
   std::array<Player *, 4> round1Winners = {competitors[0], competitors[2], competitors[4], competitors[6]};
+
+  for (int i = 0; i < 8; i++) {
+    (*competitors[i]).turnNum = 0;
+  }
 
   for (int i = 0; i < 4; i++) {
     Player * winner = runRound(competitors[i*2], competitors[(i*2)+1]);
@@ -38,9 +42,17 @@ Player * Tournament::run(array<Player *, 8>  competitors) {
 
   std::array<Player *, 2> round2Winners = {round1Winners[0], round1Winners[2]};
 
+  for (int i = 0; i < 8; i++) {
+    (*competitors[i]).turnNum = 0;
+  }
+
   for (int i = 0; i < 2; i++) {
     Player * winner = runRound(round1Winners[i*2], round1Winners[(i*2)+1]);
     round2Winners[i] = winner;
+  }
+
+  for (int i = 0; i < 8; i++) {
+    (*competitors[i]).turnNum = 0;
   }
 
   Player * winner = runRound(round2Winners[0], round2Winners[1]);

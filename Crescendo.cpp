@@ -1,8 +1,6 @@
 #include "Crescendo.h"
 
-Crescendo::Crescendo() {
-  turnNum = 0;
-};
+Crescendo::Crescendo() : Player() {};
 
 char Crescendo::makeMove() {
   turnNum++;

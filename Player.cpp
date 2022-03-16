@@ -1,7 +1,9 @@
 #include "Player.h"
 #include <stdlib.h>
 
-Player::Player() {}
+Player::Player() {
+  turnNum = 0;
+}
 
 char Player::makeMove() {
   int randomNum = rand() % 3 + 1;

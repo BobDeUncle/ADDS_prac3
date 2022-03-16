@@ -26,24 +26,6 @@ int main(void) {
   FistfullODollars player9;
   Tournament tournament;
   std::array<Player *, 8> playerArray = {&player2, &player3, &player4, &player5, &player6, &player7, &player8, &player9};
-  // cout << referee.refGame(player1, player2) << endl;
-  // cout << player3.makeMove() << endl;
-  // cout << player3.makeMove() << endl;
-  // cout << player4.makeMove() << endl;
-  // cout << player5.makeMove() << endl;
-  // cout << player6.makeMove() << endl;
-  // cout << player7.makeMove() << endl;
-  // cout << player7.makeMove() << endl;
-  // cout << player7.makeMove() << endl;
-  // cout << player7.makeMove() << endl;
-  // cout << player8.makeMove() << endl;
-  // cout << player8.makeMove() << endl;
-  // cout << player8.makeMove() << endl;
-  // cout << player8.makeMove() << endl;
-  // cout << player9.makeMove() << endl;
-  // cout << player9.makeMove() << endl;
-  // cout << player9.makeMove() << endl;
-  // cout << player9.makeMove() << endl;
   Player * winner = tournament.run(playerArray);
   cout << (*winner).makeMove() << endl;
 }

@@ -5,6 +5,7 @@ class Player {
   public: 
     Player();
     char makeMove();
+    int turnNum;
 };
 
 #endif

@@ -4,9 +4,9 @@
 #include "Player.h"
 
 class FistfullODollars : public Player {
-  int turnNum;
   public: 
     FistfullODollars();
+    int turnNum;
     char makeMove();
 };
 

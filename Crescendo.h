@@ -4,9 +4,9 @@
 #include "Player.h"
 
 class Crescendo : public Player {
-  int turnNum;
   public: 
     Crescendo();
+    int turnNum;
     char makeMove();
 };
 

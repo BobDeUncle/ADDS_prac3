@@ -4,10 +4,10 @@
 #include "Player.h"
 
 class PaperDoll : public Player {
-  int turnNum;
-  public: 
+   public: 
     PaperDoll();
     char makeMove();
+    int turnNum; 
 };
 
 #endif
