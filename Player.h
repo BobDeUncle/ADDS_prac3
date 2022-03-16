@@ -4,7 +4,7 @@
 class Player {
   public: 
     Player();
-    char makeMove();
+    virtual char makeMove();
     int turnNum;
 };
 

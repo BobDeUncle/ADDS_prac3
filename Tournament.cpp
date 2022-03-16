@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "Tournament.h"
 #include "Referee.h"
 
@@ -10,7 +8,7 @@ Player * runRound(Player * player1, Player * player2) {
   Referee referee;
 
   for (int i = 0; i < 5; i++) {
-    char gameResult = referee.refGame(*player1, *player2);
+    char gameResult = referee.refGame(player1, player2);
     if (gameResult == 'W') {
       WTally++;
     } else if (gameResult == 'L') {

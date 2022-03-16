@@ -1,4 +1,5 @@
 #include <iostream>
+#include <typeinfo> 
 
 #include "Human.h"
 #include "Computer.h"
@@ -15,18 +16,17 @@
 using namespace std;
 
 int main(void) {
-  Human player1;
-  Computer player2;
-  RandomComputer player3;
-  Avalanche player4;
-  Bureaucrat player5;
+  Avalanche player2;
+  Bureaucrat player3;
+  Bureaucrat player4;
+  Toolbox player5;
   Toolbox player6;
   Crescendo player7;
-  PaperDoll player8;
+  Crescendo player8;
   FistfullODollars player9;
   Tournament tournament;
   std::array<Player *, 8> playerArray = {&player2, &player3, &player4, &player5, &player6, &player7, &player8, &player9};
   Player * winner = tournament.run(playerArray);
-  cout << (*winner).makeMove() << endl;
+  // cout << winner << endl;
 }
 
